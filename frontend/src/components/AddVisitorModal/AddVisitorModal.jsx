@@ -28,6 +28,7 @@ export function AddVisitorModal({ getAddFormData }) {
         finalFocusRef={finalRef}
         isOpen={isOpen}
         onClose={onClose}
+        isCentered
       >
         <ModalOverlay />
         <ModalContent>

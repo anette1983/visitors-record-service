@@ -15,7 +15,6 @@ export const VisitorsTable = ({ visitors, handleDelete, getEditFormData }) => {
   const [editingVisitorId, setEditingVisitorId] = useState(null);
 
   const handleSort = (columnName) => {
-    console.log("colunmName :>> ", columnName);
     if (sortColumn === columnName) {
       setSortDirection(sortDirection === "asc" ? "desc" : "asc");
     } else {

@@ -43,7 +43,6 @@ export const AddVisitorForm = ({ getFormData, onClose, initialRef }) => {
     setName("");
     setSurname("");
   };
-  console.log("initialRef :>> ", initialRef);
 
   return (
     <StyledForm onSubmit={handleSubmit}>
