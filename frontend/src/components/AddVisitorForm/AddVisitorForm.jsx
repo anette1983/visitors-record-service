@@ -61,7 +61,7 @@ export const AddVisitorForm = ({ getFormData, onClose, initialRef }) => {
         Surname
         <input
           onChange={handleChange}
-          type="tel"
+          type="text"
           name="surname"
           value={surname}
           title="Surname may contain only letters, apostrophe, dash and spaces. For example Adrian, Jacob Mercer, Charles de Batz de Castelmore d'Artagnan"
