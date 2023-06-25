@@ -8,4 +8,8 @@ export const Container = styled.div`
 
   margin-left: auto;
   margin-right: auto;
+  @media screen and (max-width: 520px) {
+    padding-left: ${(props) => props.theme.spacing(2)};
+    padding-right: ${(props) => props.theme.spacing(2)};
+  }
 `;

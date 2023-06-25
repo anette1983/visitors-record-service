@@ -18,7 +18,7 @@ export const GlobalStyles = css`
     font-style: normal;
   }
 
-  @media screen and (max-width: 420px) {
+  @media screen and (max-width: 520px) {
     :where(*) {
       overflow-wrap: anywhere;
     }
