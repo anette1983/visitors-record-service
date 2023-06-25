@@ -396,6 +396,10 @@ Error generating stack: `+i.message+`
 
   margin-left: auto;
   margin-right: auto;
+  @media screen and (max-width: 520px) {
+    padding-left: ${e=>e.theme.spacing(2)};
+    padding-right: ${e=>e.theme.spacing(2)};
+  }
 `,Gy=ot.h2`
   font-size: ${e=>e.theme.fontSizes.large};
   font-weight: 700;
@@ -432,8 +436,8 @@ Error generating stack: `+i.message+`
 
   box-shadow: ${({theme:e})=>e.shadows.small};
 
-  @media screen and (max-width: 420px) {
-    max-width: 320px;
+  @media screen and (max-width: 520px) {
+    max-width: 480px;
   }
 `,KI=ot.thead`
   color: ${({theme:e})=>e.colors.white};
@@ -443,7 +447,7 @@ Error generating stack: `+i.message+`
   padding: 10px;
   border: 1px solid ${({theme:e})=>e.colors.gray};
   color: ${({theme:e})=>e.colors.dark};
-  @media screen and (max-width: 420px) {
+  @media screen and (max-width: 520px) {
     padding: 2px;
   }
 `,ko=ot.th`
@@ -464,7 +468,7 @@ Error generating stack: `+i.message+`
   &:nth-of-type(4):active {
     transform: scale(1.2);
   }
-  @media screen and (max-width: 420px) {
+  @media screen and (max-width: 520px) {
     padding: 2px;
   }
 `,XI=ot.tr`
@@ -544,7 +548,7 @@ Error generating stack: `+i.message+`
     font-style: normal;
   }
 
-  @media screen and (max-width: 420px) {
+  @media screen and (max-width: 520px) {
     :where(*) {
       overflow-wrap: anywhere;
     }
