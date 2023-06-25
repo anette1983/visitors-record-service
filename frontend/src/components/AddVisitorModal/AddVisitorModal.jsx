@@ -1,4 +1,4 @@
-import * as React from "react";
+import { useRef } from "react";
 import PropTypes from "prop-types";
 
 import {
@@ -16,8 +16,8 @@ import { AddVisitorForm } from "../AddVisitorForm/AddVisitorForm";
 export function AddVisitorModal({ getAddFormData }) {
   const { isOpen, onOpen, onClose } = useDisclosure();
 
-  const initialRef = React.useRef(null);
-  const finalRef = React.useRef(null);
+  const initialRef = useRef(null);
+  const finalRef = useRef(null);
 
   return (
     <>
