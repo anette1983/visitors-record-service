@@ -9,6 +9,10 @@ export const BaseTable = styled.table`
   text-align: center;
 
   box-shadow: ${({ theme }) => theme.shadows.small};
+
+  @media screen and (max-width: 420px) {
+    max-width: 320px;
+  }
 `;
 
 export const THead = styled.thead`
@@ -21,6 +25,9 @@ export const Td = styled.td`
   padding: 10px;
   border: 1px solid ${({ theme }) => theme.colors.gray};
   color: ${({ theme }) => theme.colors.dark};
+  @media screen and (max-width: 420px) {
+    padding: 2px;
+  }
 `;
 
 export const Th = styled.th`
@@ -40,6 +47,9 @@ export const Th = styled.th`
   &:nth-of-type(3):active,
   &:nth-of-type(4):active {
     transform: scale(1.2);
+  }
+  @media screen and (max-width: 420px) {
+    padding: 2px;
   }
 `;
 
