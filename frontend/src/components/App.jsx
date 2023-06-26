@@ -1,6 +1,12 @@
 import { useEffect, useState } from "react";
 import { useToast } from "@chakra-ui/react";
-import { Container, Section, Heading, VisitorsTable } from "../components/";
+import {
+  Container,
+  Section,
+  Heading,
+  VisitorsTable,
+  LoadingHeading,
+} from "../components/";
 import { AddVisitorModal } from "./AddVisitorModal/AddVisitorModal";
 import {
   addUser,
@@ -87,7 +93,16 @@ const App = () => {
           getEditFormData={getEditFormData}
         />
         {isLoading && (
-          <StyledSpinner size="lg" emptyColor="gray.200" color="blue.500" />
+          <>
+            <StyledSpinner size="lg" emptyColor="gray.200" color="blue.500" />
+            <LoadingHeading
+              marginTop="50px"
+              marginBottom="50px"
+              textAlign="center"
+            >
+              Database is loading... Please wait!
+            </LoadingHeading>
+          </>
         )}
         {error && (
           <Heading marginTop="50px" marginBottom="50px" textAlign="center">
