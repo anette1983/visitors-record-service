@@ -6,6 +6,7 @@ import {
   Heading,
   VisitorsTable,
   LoadingHeading,
+  LoadingText,
 } from "../components/";
 import { AddVisitorModal } from "./AddVisitorModal/AddVisitorModal";
 import {
@@ -19,6 +20,7 @@ import { StyledSpinner } from "../components";
 const App = () => {
   const [visitors, setVisitors] = useState([]);
   const [isLoading, setIsLoading] = useState(false);
+  const [showAdditionalComponent, setShowAdditionalComponent] = useState(false);
   const [error, setError] = useState(null);
   const toast = useToast();
 
@@ -38,6 +40,20 @@ const App = () => {
   useEffect(() => {
     getAllVisitors();
   }, []);
+
+  useEffect(() => {
+    if (isLoading) {
+      const timer = setTimeout(() => {
+        setShowAdditionalComponent(true);
+      }, 10000);
+
+      return () => {
+        clearTimeout(timer);
+      };
+    } else {
+      setShowAdditionalComponent(false);
+    }
+  }, [isLoading]);
 
   const handleDelete = async (id) => {
     setIsLoading(true);
@@ -102,6 +118,18 @@ const App = () => {
             >
               Database is loading... Please wait!
             </LoadingHeading>
+            {showAdditionalComponent && (
+              <LoadingText
+                marginTop="50px"
+                marginBottom="50px"
+                textAlign="center"
+              >
+                The initial setup of the database may take up to 25 seconds due
+                to the limitations of the free deployment version on render.com.
+                Subsequent interactions with the database will proceed at a
+                regular pace without any delays.
+              </LoadingText>
+            )}
           </>
         )}
         {error && (
